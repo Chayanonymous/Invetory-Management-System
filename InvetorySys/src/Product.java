@@ -1,32 +1,36 @@
+import java.util.ArrayList;
 
 public class Product {
+	
+	private static ArrayList<Product> productList = new ArrayList<>();
+	
 	private int id;
 	private String description;
 	private String name;
 	private String category;
 	private String brand;
 	
-	public void getId(){
-		this.id = id;
+	public int getId(){
+		return id;
 	}
 	
-	public void getDecsription() {
-		this.description = description;
+	public String getDecsription() {
+		return description;
 	}
 	
-	public void getName() {
-		this.name = name;
+	public String getName() {
+		return name;
 	}
 	
-	public void getCategory() {
-		this.category = category;
+	public String getCategory() {
+		return category;
 	}
 	
-	public void getBrand() {
-		this.brand = brand;
+	public String getBrand() {
+		return brand;
 	}
 	
-	public void addProduct(String name, String description, String category, String brand){
+	public void addProduct(String name, String description, String category, String brand, double cost, double quant){
 	
 	}
 	
@@ -37,4 +41,14 @@ public class Product {
 	public void deleteProduct(int id) {
 		
 	}
+	
+	public Product findProductByID(int id) {
+		for (Product p: productList) {
+			if(p.getId() == id) {
+				return p;
+			}
+		}
+		return null;
+	}
+	
 }
