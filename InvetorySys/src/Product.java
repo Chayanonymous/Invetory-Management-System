@@ -15,6 +15,10 @@ public class Product {
 		this.category = category;
 		this.brand = brand;
 	}
+	
+	public Product(int id) {
+		this.id = id;
+	}
 	// Getters
 	public int getId(){
 		return id;
